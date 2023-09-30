@@ -1,9 +1,53 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Laboratorio04.CarouselPage1">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+    <ContentPage>
+
+        <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform ="iOs, Android" Value="0,40,0,0"></On>
+                
+            </OnPlatform>
+        </ContentPage.Padding>
+        <StackLayout>
+
+            <Label Text="Red" FontSize="Medium" HorizontalOptions="Center"></Label>
+            <BoxView Color="red" WidthRequest="200" HeightRequest="200"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                     ></BoxView>
+        
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+
+        <StackLayout>
+            <Label Text="gree" FontSize="Medium" HorizontalOptions="Center" >
+            </Label>
+            <BoxView Color="Green" WidthRequest="200" HeightRequest="200"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                     >
+                
+            </BoxView>
+            
+        </StackLayout>
+        
+    </ContentPage>
+
+
+    <ContentPage>
+        <StackLayout>
+            <Label Text="blue" FontSize="Medium" HorizontalOptions="Center">
+                
+            </Label>
+            <BoxView Color="blue" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></BoxView>
+            
+        </StackLayout>
+        
+    </ContentPage>
+
+    <ContentPage>
+        <Button Text="close" x:Name="btnClose"></Button>
+    </ContentPage>
 </CarouselPage>

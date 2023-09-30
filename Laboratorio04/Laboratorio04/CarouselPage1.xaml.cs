@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace Laboratorio04
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CarouselPage1 : TabbedPage
+    public partial class CarouselPage1 : CarouselPage
     {
         public CarouselPage1()
         {
